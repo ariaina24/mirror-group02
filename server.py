@@ -30,7 +30,7 @@ class index:
             result += '<tr>'
             for artist in a3:
                 result += '<td class="bg-dark text-white text-center">' + str(a.ArtistId) + '</td>'
-                result += '<td>' +artist.Name+'</td>'
+                result += '<td>' +artist.Name+'</td>' 
                 break 
             for genre in grs:
                 result += '<td>' +genre.Name+'</td>'
