@@ -34,10 +34,10 @@ class index:
                 result += '<td>' +genre.Name+'</td>'
                 break
             for customer in cstm:
-                result += '<td>' +customer.Name+'</td>'
+                result += '<td>' +customer.FirstName+'</td>'
                 break
             for employee in employe:
-                result += '<td>' +employee.Name+'</td>'
+                result += '<td>' +employee.LastName+'</td>'
                 break
             for playlist in playList:
                 result += '<td>' +playlist.Name+'</td>'
