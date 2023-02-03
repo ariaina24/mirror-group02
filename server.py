@@ -21,7 +21,7 @@ class index:
         cstm=db.select('Customer', limit=10)
         playList=db.select('Playlist', limit=10)
         employe=db.select('Employee', limit=10)
-        result = '<html><head><title>test</title></head>'
+        result = '<html><head><title>Groupe02</title></head>'
         result += '<table border= "1">'
         result += '<tr><th>Id_Artist</th><th>Artists</th><th>Genres</th><th>Playlists</th><th>Albums</th></tr>'
         for a in a2:
@@ -34,10 +34,10 @@ class index:
                 result += '<td>' +genre.Name+'</td>'
                 break
             for customer in cstm:
-                result += '<td>' +customer.Name+'</td>'
+                result += '<td>' +customer.FirstName+'</td>'
                 break
             for employee in employe:
-                result += '<td>' +employee.Name+'</td>'
+                result += '<td>' +employee.LastName+'</td>'
                 break
             for playlist in playList:
                 result += '<td>' +playlist.Name+'</td>'
