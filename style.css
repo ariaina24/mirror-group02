@@ -24,3 +24,8 @@ h3{
     margin-left: 100px;
     color: white;
 }
+.paragraphe strong{
+    text-decoration: underline;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
