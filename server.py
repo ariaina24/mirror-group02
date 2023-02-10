@@ -26,7 +26,7 @@ class index:
         mdtype=db.select('MediaType', limit=8)
         playlistTrack=db.select('PlaylistTrack', limit=8)
         track=db.select('Track', limit=8)
-        result = '<html><head><title>test</title>'
+        result = '<html><head><title>Test Groupe 02</title>'
         result += '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">'
         result += '</head>'
         result += '<table class="container table table-border" border= "1">'
