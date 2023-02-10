@@ -29,6 +29,9 @@ class index:
         result = '<html><head><title>Test Groupe 02</title>'
         result += '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">'
         result += '</head>'
+        result += '<nav class="navbar navbar-expand-lg navbar-light bg-light rounded" aria-label="Twelfth navbar example"><div class="container-fluid"><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span> </button><div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li><li class="nav-item"><a class="nav-link" aria-current="page" href="#">Album</a></li>'
+        result +=  '<li class="nav-item"><a class="nav-link" href="#">Artist</a></li><li class="nav-item"><a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Liste de genre</a></li><li class="nav-item"><a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Employee</a></li>'
+        result +=  '</ul></div></div></nav>'
         result += '<table class="container table table-border" border= "1">'
         result += '<tr class="bg-primary text-white text-center"><th>Id Artist</th><th>Artists</th><th>Genres</th><th>Customer</th><th>Employee</th><th>Invoice</th><th>InvoiceLine</th><th>MediaType</th><th>Playlists</th><th>Albums</th></tr>'
         for a in a2:
