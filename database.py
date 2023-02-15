@@ -9,5 +9,5 @@ class Db:
         pw='insigroup00',
         db='project00',
     )
-def getDb(self):
-    return self.db
+    def getDb(self):
+        return self.db
