@@ -1,7 +1,9 @@
 import web
 from database import Db
+from navbar import Navbar
 
-web.config.debug = False
+
+web.config.debug = True
 
 urls = (
     '/', 'index'
@@ -9,6 +11,8 @@ urls = (
 
 class index:
     def GET(self):
+        navbar = Navbar()
+        navbar_html = navbar.get_navbar()
         d = Db()
         db = d.getDb()
         a2=db.select('Album', limit=8)
@@ -22,24 +26,7 @@ class index:
         mdtype=db.select('MediaType', limit=8)
         playlistTrack=db.select('PlaylistTrack', limit=8)
         track=db.select('Track', limit=8)
-        result = '<html><head><title>Test Groupe 02</title>'
-        result += '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">'
-        result += '</head>'
-        result += '<nav class="navbar navbar-expand-lg navbar-light bg-light rounded " >'
-        result += '<div class="container-fluid justify-content-md-center">'
-        result += '<ul class="navbar-nav">'
-        result += '<li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" aria-current="page" href="#">Album</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="#">Artist</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="#">Liste de genre</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="#">Employee</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="#">Invoice</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="#">InvoiceLine</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="#">MediaType</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" href="#">Playlist</a></li>'
-        result += '</ul>'
-        result += '</div>'
-        result += '</nav>'
+        result = navbar_html
         result += '<table class="container-fluid table table-border" border= "1">'
         result += '<tr class="bg-primary text-white text-center"><th>Id Artist</th><th>Artists</th><th>Genres</th><th>Customer</th><th>Employee</th><th>Invoice</th><th>InvoiceLine</th><th>MediaType</th><th>Playlists</th><th>Playlists Tracks</th><th>Albums</th></tr>'
         for a in a2:
