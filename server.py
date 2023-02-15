@@ -41,7 +41,7 @@ class index:
         result += '</div>'
         result += '</nav>'
         result += '<table class="container-fluid table table-border" border= "1">'
-        result += '<tr class="bg-primary text-white text-center"><th>Id Artist</th><th>Artists</th><th>Genres</th><th>Customer</th><th>Employee</th><th>Invoice</th><th>InvoiceLine</th><th>MediaType</th><th>Playlists</th><th>Albums</th></tr>'
+        result += '<tr class="bg-primary text-white text-center"><th>Id Artist</th><th>Artists</th><th>Genres</th><th>Customer</th><th>Employee</th><th>Invoice</th><th>InvoiceLine</th><th>MediaType</th><th>Playlists</th><th>Playlists Tracks</th><th>Albums</th></tr>'
         for a in a2:
             result += '<tr>'
             for artist in a3:
@@ -67,6 +67,9 @@ class index:
                 result += '<td>' +MediaType.Name+'</td>' 
                 break
             for playlist in playList:
+                result += '<td>' +playlist.Name+'</td>'
+                break
+            for playlist_track in playlistTrack:
                 result += '<td>' +playlist.Name+'</td>'
                 break
             result += '<td>' +a.Title+'</td>'
