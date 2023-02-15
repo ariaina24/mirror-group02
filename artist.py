@@ -6,7 +6,8 @@ web.config.debug = True
 
 urls = (
     '/', 'index',
-    '/artist', 'Artist'
+    '/artist', 'Artist',
+    '/album', 'Album'
 )
 
 class Artist:
