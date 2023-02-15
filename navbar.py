@@ -9,7 +9,7 @@ class Navbar:
         result += '<div class="container-fluid justify-content-md-center">'
         result += '<ul class="navbar-nav">'
         result += '<li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>'
-        result += '<li class="nav-item"><a class="nav-link" aria-current="page" href="#">Album</a></li>'
+        result += '<li class="nav-item"><a class="nav-link" aria-current="page" href="/album">Album</a></li>'
         result += '<li class="nav-item"><a class="nav-link" href="/artist">Artist</a></li>'
         result += '<li class="nav-item"><a class="nav-link" href="#">Liste de genre</a></li>'
         result += '<li class="nav-item"><a class="nav-link" href="#">Employee</a></li>'
