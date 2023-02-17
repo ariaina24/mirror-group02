@@ -9,7 +9,7 @@ from invoice import Invoice
 from album import Album
 from invoiceLine import InvoiceLine 
 from mediaType import MediaType
-
+from playlist import Playlist
 
 web.config.debug = True
 
@@ -22,7 +22,8 @@ urls = (
     '/album', 'Album',
     '/invoiceLine', 'InvoiceLine',
     '/mediaType', 'MediaType',
-    '/customer', 'Customer'
+    '/customer', 'Customer',
+    '/playlist', 'Playlist'
 
 )
 
