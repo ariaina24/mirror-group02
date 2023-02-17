@@ -6,10 +6,12 @@ web.config.debug = True
 
 urls = (
     '/', 'index',
+    '/album', 'Album'
     '/artist', 'Artist',
     '/genre', 'Genre',
     '/employee', 'Employee',
     '/invoice', 'Invoice',
+    '/mediaType', 'MediaType',
     '/invoiceLine', 'InvoiceLine',
     '/customer', 'Customer'
 )
