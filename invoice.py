@@ -9,7 +9,9 @@ urls = (
     '/artist', 'Artist',
     '/genre', 'Genre',
     '/employee', 'Employee',
-    '/invoice', 'Invoice'
+    '/invoice', 'Invoice',
+    '/invoiceLine', 'InvoiceLine',
+    '/customer', 'Customer'
 )
 
 class Invoice:
