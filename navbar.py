@@ -18,7 +18,7 @@ class Navbar:
         result += '<li class="nav-item"><a class="nav-link text-light" href="/invoiceLine">InvoiceLine</a></li>'
         result += '<li class="nav-item"><a class="nav-link text-light" href="/mediaType">MediaType</a></li>'
         result += '<li class="nav-item"><a class="nav-link text-light" href="/playlist">Playlist</a></li>'
-        result += '<li class="nav-item"><a class="nav-link text-light" href="#">Playlist Track</a></li>'
+        result += '<li class="nav-item"><a class="nav-link text-light" href="/playlistTrack">Playlist Track</a></li>'
         result += '</ul>'
         result += '</div>'
         result += '</nav>'
