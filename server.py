@@ -23,7 +23,8 @@ urls = (
     '/invoiceLine', 'InvoiceLine',
     '/mediaType', 'MediaType',
     '/customer', 'Customer',
-    '/playlist', 'Playlist'
+    '/playlist', 'Playlist', 
+    '/playlistTrack', 'PlaylistTrack'
 
 )
 
