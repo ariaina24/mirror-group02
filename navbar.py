@@ -12,7 +12,7 @@ class Navbar:
         result += '<li class="nav-item"><a class="nav-link text-light" aria-current="page" href="/album">Album</a></li>'
         result += '<li class="nav-item"><a class="nav-link text-light" href="/artist">Artist</a></li>'
         result += '<li class="nav-item"><a class="nav-link text-light" href="/customer">Customer</a></li>'
-        result += '<li class="nav-item"><a class="nav-link text-light" href="/genre">Liste de genre</a></li>'
+        result += '<li class="nav-item"><a class="nav-link text-light" href="/genre">Genre</a></li>'
         result += '<li class="nav-item"><a class="nav-link text-light" href="/employee">Employee</a></li>'
         result += '<li class="nav-item"><a class="nav-link text-light" href="/invoice">Invoice</a></li>'
         result += '<li class="nav-item"><a class="nav-link text-light" href="/invoiceLine">InvoiceLine</a></li>'
