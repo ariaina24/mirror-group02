@@ -2,6 +2,7 @@ import web
 from database import Db
 from navbar import Navbar
 from artist import Artist
+from customer import Customer
 from genre import Genre
 from employee import Employee
 from invoice import Invoice
@@ -20,7 +21,8 @@ urls = (
     '/invoice', 'Invoice',
     '/album', 'Album',
     '/invoiceLine', 'InvoiceLine',
-    '/mediaType', 'MediaType'
+    '/mediaType', 'MediaType',
+    '/customer', 'Customer'
 
 )
 
