@@ -1,20 +1,39 @@
 import web
+from database import Db
+from navbar import Navbar
+from artist import Artist
+from customer import Customer
+from genre import Genre
+from employee import Employee
+from invoice import Invoice
+from album import Album
+from invoiceLine import InvoiceLine 
+from mediaType import MediaType
+from playlist import Playlist
+
 web.config.debug = True
 
 urls = (
-    '/', 'index'
+    '/', 'index',
+    '/artist', 'Artist',
+    '/genre', 'Genre',
+    '/employee', 'Employee',
+    '/invoice', 'Invoice',
+    '/album', 'Album',
+    '/invoiceLine', 'InvoiceLine',
+    '/mediaType', 'MediaType',
+    '/customer', 'Customer',
+    '/playlist', 'Playlist', 
+    '/playlistTrack', 'PlaylistTrack'
+
 )
 
 class index:
     def GET(self):
-        db = web.database(
-            dbn='mysql',
-            host='tmp-insi.rktmb.org',
-            port=3306,
-            user='insigroup00',
-            pw='insigroup00',
-            db='project00',
-        )
+        navbar = Navbar()
+        navbar_html = navbar.get_navbar()
+        d = Db()
+        db = d.getDb()
         a2=db.select('Album', limit=8)
         a3=db.select('Artist', limit=8)
         grs=db.select('Genre', limit=8)
@@ -26,11 +45,9 @@ class index:
         mdtype=db.select('MediaType', limit=8)
         playlistTrack=db.select('PlaylistTrack', limit=8)
         track=db.select('Track', limit=8)
-        result = '<html><head><title>Test Groupe 02</title>'
-        result += '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">'
-        result += '</head>'
-        result += '<table class="container table table-border" border= "1">'
-        result += '<tr class="bg-primary text-white text-center"><th>Id Artist</th><th>Artists</th><th>Genres</th><th>Customer</th><th>Employee</th><th>Invoice</th><th>InvoiceLine</th><th>MediaType</th><th>Playlists</th><th>Albums</th></tr>'
+        result = navbar_html
+        result += '<table class="container-fluid table table-border" border= "1">'
+        result += '<tr class="bg-primary text-white text-center"><th>Id Artist</th><th>Artists</th><th>Genres</th><th>Customer</th><th>Employee</th><th>Invoice</th><th>InvoiceLine</th><th>MediaType</th><th>Playlists</th><th>Playlists Tracks</th><th>Albums</th></tr>'
         for a in a2:
             result += '<tr>'
             for artist in a3:
@@ -56,6 +73,9 @@ class index:
                 result += '<td>' +MediaType.Name+'</td>' 
                 break
             for playlist in playList:
+                result += '<td>' +playlist.Name+'</td>'
+                break
+            for playlist_track in playlistTrack:
                 result += '<td>' +playlist.Name+'</td>'
                 break
             result += '<td>' +a.Title+'</td>'
